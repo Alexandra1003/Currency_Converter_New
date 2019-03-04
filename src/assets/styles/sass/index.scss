@@ -3,9 +3,89 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 
 
-html { height: 100%; }
 body {
-  min-height: 100%;
-  position: relative;
-  padding-bottom: 60px;
+  background: #decee7;
+  color: #3f0f6b;
+  font-size: 16px;
+
+  .connection-message {
+    background-color: rgba( 105, 89, 89, 0.5);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .active {
+    color: red; font-weight: bold
+  }
+
+  .navbar {
+    background-color: #c9aace;
+
+    .navbar-brand {
+      margin-right: 3rem;
+    }
+  }
+
+  .header-wrapper {
+    text-align: center;
+    h3 {
+      line-height: 100px;
+    }
+  }
+}
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  .main-header {
+    text-align: center;
+  }
+}
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #ba9cc4;
+  border: 1px solid #5e2a8e;
+  border-radius: 5px;
+  padding: 15px 15px 0px;
+
+  .form-group.col-md-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+
+    .change-button {
+      background: #905faf;
+      border-color: #442259;
+      color: white;
+    }
+  }
+
+  .input-group {
+    margin-bottom: 10px;
+    .commission-header {
+      margin-bottom: 15px;
+    }
+  }
+
+  .form-control {
+    margin-bottom: 20px;
+  }
+
+  .rate-header {
+    margin-bottom: 15px;
+  }
+
+  .commission-select {
+    float: right;
+  }
 }

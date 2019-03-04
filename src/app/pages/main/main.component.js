@@ -1,11 +1,11 @@
 'use strict';
 
-import MainController from './main.controller';
-import mainTpl from './main.html';
+import ConverterController from './main.controller';
+import ConverterTpl from './main.html';
 
-export default class MainComponent {
+export default class ConverterComponent {
     constructor() {
-        this.controller = MainController;
-        this.templateUrl = mainTpl;
+        this.controller = ConverterController;
+        this.templateUrl = ConverterTpl;
     }
 }
