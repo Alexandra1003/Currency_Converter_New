@@ -3,12 +3,14 @@
 const shared = angular.module('core.shared', []);
 
 import validationTestDirective from './directives/validation-test/validation-test.directive';
+import noConnectionDirective from './directives/noConnection/noConnection.directive';
 
 import constants from './services/constants';
 import storeFactory from './services/store.factory';
 import resolverProvider from './services/resolver.provider';
 
 validationTestDirective(shared);
+noConnectionDirective(shared);
 
 constants(shared);
 storeFactory(shared);
