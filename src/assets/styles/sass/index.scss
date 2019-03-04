@@ -24,19 +24,15 @@ body {
     color: red; font-weight: bold
   }
 
-  .navbar {
-    background-color: #c9aace;
-
-    .navbar-brand {
-      margin-right: 3rem;
-    }
-  }
-
   .header-wrapper {
     text-align: center;
     h3 {
       line-height: 100px;
     }
+  }
+
+  .main-wrapper {
+    margin: 0 auto;
   }
 }
 .content-wrapper {

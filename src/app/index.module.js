@@ -8,6 +8,7 @@ import uiRouter from '@uirouter/angularjs';
 import coreModule from './core/core.module';
 import indexComponents from './index.components';
 import indexRoutes from './index.routes';
+import converterModule from './pages/converter/converter.module';
 import mainModule from './pages/main/main.module';
 
 
@@ -28,6 +29,7 @@ const App = angular.module(
     indexRoutes.name,
 
     // pages
+    converterModule.name,
     mainModule.name
 
   ]
