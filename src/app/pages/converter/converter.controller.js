@@ -1,24 +1,16 @@
 'use strict';
 
-function ConverterController($scope, CommissionList, rateService/* , currencyList */) {
+function ConverterController($scope, CommissionList, rateService, currencyList) {
   'ngInject';
-    // $scope.list = currencyList;
-    // $scope.fieldSell = $scope.list[1];
-    // $scope.fieldBuy = $scope.list[0];
+    $scope.list = currencyList;
+    $scope.fieldSell = $scope.list[1];
+    $scope.fieldBuy = $scope.list[0];
 
-    // $scope.rateBuy = rateService.getRate($scope.fieldSell, $scope.fieldBuy);
-    // $scope.rateSell = rateService.getRate($scope.fieldBuy, $scope.fieldSell);
+    $scope.rateBuy = rateService.getRate($scope.fieldSell, $scope.fieldBuy);
+    $scope.rateSell = rateService.getRate($scope.fieldBuy, $scope.fieldSell);
 
     $scope.fieldCommission = CommissionList[0];
     $scope.commissionList = CommissionList;
-
-    rateService.getRateList().then(data => {
-      $scope.list = data;
-      $scope.fieldSell = $scope.list[1];
-      $scope.fieldBuy = $scope.list[0];
-      $scope.rateBuy = rateService.getRate($scope.fieldSell, $scope.fieldBuy);
-      $scope.rateSell = rateService.getRate($scope.fieldBuy, $scope.fieldSell);
-    });
 
     $scope.$watchGroup(['fieldBuy', 'fieldSell'], function () {
       $scope.updateCurrValue();

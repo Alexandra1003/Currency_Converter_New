@@ -1,6 +1,8 @@
 'use strict';
 
 import ConverterComponent from './converter.component';
+import ConverterController from './converter.controller';
+import ConverterTpl from './converter.html';
 
 const converterPageModule = angular.module('converter-module', [
   'ui.router'
@@ -14,12 +16,13 @@ const converterPageModule = angular.module('converter-module', [
     $stateProvider
       .state('currConverterState', {
         url: '/currencyConverter',
-        component: 'converter'/* ,
+        controller: ConverterController,
+        templateUrl: ConverterTpl,
         resolve: {
           currencyList: rateService => {
             return rateService.getRateList();
           }
-        } */
+        }
       })
   })
   .run(($rootScope, $window) => {
