@@ -7,7 +7,5 @@ export default class ConverterComponent {
     constructor() {
         this.controller = ConverterController;
         this.templateUrl = ConverterTpl;
-        
-    this.bindings = { currencyList: '<' };
     }
 }

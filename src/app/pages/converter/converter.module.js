@@ -25,22 +25,6 @@ const converterPageModule = angular.module('converter-module', [
         }
       })
   })
-  .run(($rootScope, $window) => {
-    'ngInject';
-    $rootScope.connectionStatus = navigator.onLine;
-
-    $window.addEventListener('offline', function () {
-      $rootScope.$applyAsync(function () {
-        $rootScope.connectionStatus = false;
-      });
-    });
-
-    $window.addEventListener('online', function () {
-      $rootScope.$applyAsync(function () {
-        $rootScope.connectionStatus = true;
-      });
-    });
-  })
   .component('converter', new ConverterComponent());
 
 export default converterPageModule;
